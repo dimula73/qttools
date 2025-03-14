@@ -153,9 +153,6 @@ void dumpGlInfo(QTextStream &str, bool listExtensions)
 {
     QOpenGLContext context;
     if (context.create()) {
-#  ifdef QT_OPENGL_DYNAMIC
-        str << "Dynamic GL ";
-#  endif
         switch (context.openGLModuleType()) {
         case QOpenGLContext::LibGL:
             str << "LibGL";
